@@ -1,0 +1,26 @@
+div {
+  height: 120px;
+  width: 500px;
+  background-color: yellow;
+  border: 5px solid green;
+  border-left: 5px dotted red;
+  border-right: 5px dotted purple;
+  border-top: 5px dashed cyan;
+  border-bottom: 5px dashed skyblue;
+  border-radius: 50px;
+  /* border-top-right-radius: 20px; */
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+h1 {
+  border: 5px dashed red;
+}
+button {
+  background-color: purple;
+  color: white;
+  border: 5px solid purple;
+  border-radius: 20px;
+  margin-left: 220px;
+}

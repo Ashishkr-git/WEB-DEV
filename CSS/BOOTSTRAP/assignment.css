@@ -1,0 +1,4 @@
+.card:hover{
+    flex-grow: 0.5;
+    transition-duration: 3s;
+}

@@ -1,0 +1,16 @@
+h2 {
+  text-align: center;
+  border: solid;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+}
+p1 {
+  text-align: center;
+  text-decoration: red underline;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+}

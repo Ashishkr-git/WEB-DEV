@@ -1,0 +1,28 @@
+.box {
+  height: 100px;
+  width: 300px;
+  background-color: pink;
+
+  /* animation-name: widthanimate;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-delay: 0;
+  animation-iteration-count: 3;
+  animation-direction: alternate; */
+  animation: widthanimate 3s ease-in 0s infinite alternate;
+}
+
+@keyframes widthanimate {
+  from {
+    width: 10px;
+    background-color: pink;
+  }
+  to {
+    width: 400px;
+    background-color: red;
+    border-radius: 15px;
+    font-size: 40px;
+  }
+}
+
+

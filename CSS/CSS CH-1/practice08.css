@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+  text-decoration: teal double underline;
+  line-height: 1.5;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #ffa511;
+  font-size: 55px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}

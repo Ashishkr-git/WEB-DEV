@@ -1,0 +1,27 @@
+#card {
+  height: fit-content;
+  width: fit-content;
+  border: 2px dotted maroon;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 16px maroon;
+  text-align: center;
+  transition: 1s;
+}
+img {
+  width: fit-content;
+}
+#male-logo{
+    border-bottom: 2px dotted maroon;
+    margin: none;
+}
+#female-logo{
+    border-bottom: 2px dotted maroon;
+    margin: none;
+}
+#card:hover {
+    box-shadow: 12px 12px 8px maroon;
+}

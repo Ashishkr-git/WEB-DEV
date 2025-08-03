@@ -1,0 +1,11 @@
+h1 {
+  border: 2px solid black;
+}
+#outer{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    margin-left: 33%;
+    background-color: red;
+}
+
