@@ -1,0 +1,17 @@
+body {
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+#taskInput {
+  display: inline-flex;
+  margin-inline-start: 42vw;
+
+}
+
+#taskList {
+  margin-left: 42vw;
+}
