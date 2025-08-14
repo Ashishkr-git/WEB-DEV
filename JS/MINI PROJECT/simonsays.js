@@ -33,9 +33,11 @@ function flash(btn) {
 
 function btnpress() {
   let btn = this;
+  flash(btn);
+  console.log(btn.innerText);
 }
 
 let allbtns = document.querySelectorAll(".btn");
-for (btn of allbtns){
-    btn.addEventListener("click",btnpress)
+for (btn of allbtns) {
+  btn.addEventListener("click", btnpress);
 }
