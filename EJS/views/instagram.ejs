@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INSTAGRAM</title>
-    <style>
-      img {
-        height: 100px;
-        width: 100px;
-      }
-    </style>
-  </head>
+<%- include("includes/head.ejs") %>
   <body>
     <h2>this page belong to <%= data.name%></h2>
     <h2>followers :<%= data.followers%></h2>
@@ -25,4 +13,6 @@
     </p>
     <% } %>
   </body>
+  <script src="/app.js"></script>
 </html>
+

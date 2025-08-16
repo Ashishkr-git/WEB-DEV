@@ -1,0 +1,15 @@
+const express = require("express");
+const app = express();
+const port = 8080;
+app.listen(port, () => {
+  console.log(`listening to port ${port}`);
+});
+
+app.get("/register", (req, res) => {
+  let { username, password } = req.query;
+  res.send(`welcome to get ${username}`);
+});
+app.post("/register", (req, res) => {
+  console.log(req.body)
+  res.send("standard post response");
+});
