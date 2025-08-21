@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="simonsays.css" />
   </head>
   <body>
-    <h1>Welcome to Simon Says</h1>
-    <h2>press any key to start</h2>
-    <div class="game-container">
-        <div class="red btn">1</div>
-        <div class="blue btn">2</div>
-        <div class="green btn">3</div>
-        <div class="yellow btn">4</div>
+    <div class="wrap">
+      <h1>Simon Says</h1>
+
+      <div class="board" id="board">
+        <button class="pad green" data-id="0" aria-label="Green"></button>
+        <button class="pad red" data-id="1" aria-label="Red"></button>
+        <button class="pad yellow" data-id="2" aria-label="Yellow"></button>
+        <button class="pad blue" data-id="3" aria-label="Blue"></button>
+      </div>
+
+      <div class="panel">
+        <div class="status" id="status">Press Start</div>
+        <div>
+          Level: <span id="level">0</span> • Best: <span id="best">0</span>
+        </div>
+        <div class="controls">
+          <button id="start">Start</button>
+          <button id="strict" class="secondary">Strict: Off</button>
+          <button id="mute" class="secondary">Sound: On</button>
+        </div>
+      </div>
     </div>
     <script src="simonsays.js"></script>
   </body>

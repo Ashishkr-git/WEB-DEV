@@ -1,40 +1,124 @@
-
-h1,
-h2 {
-  text-align: center;
+:root {
+  --size: 160px;
+  --gap: 16px;
+  --radius: 18px;
+  --shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
-.game-container {
-  margin: 20px auto;
+body {
+  margin: 0;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
-  gap: 10px; /* space between boxes */
-  width: 300px;
-  height: 300px;
+  place-items: center;
+  background: radial-gradient(1000px 600px at 50% -20%, #1d2533, #0f1420);
+  color: #e7ecf3;
+  font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.btn {
-  background: #eee;
-  border: 2px solid black;
+.wrap {
+  display: grid;
+  gap: 20px;
+  place-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(2, var(--size));
+  grid-template-rows: repeat(2, var(--size));
+  gap: var(--gap);
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.pad {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  transform: translateZ(0);
+  cursor: pointer;
+  transition: transform 80ms ease, filter 120ms ease, opacity 120ms ease;
+  outline: none;
+  border: none;
+}
+
+.pad:active {
+  transform: scale(0.98);
+  filter: brightness(1.1);
+}
+
+.pad.red {
+  background: #e74c3c;
+}
+.pad.green {
+  background: #2ecc71;
+}
+.pad.blue {
+  background: #3498db;
+}
+.pad.yellow {
+  background: #f1c40f;
+  color: #111;
+}
+
+.pad.lit {
+  filter: brightness(1.35) saturate(1.1);
+  box-shadow: 0 0 28px 6px rgba(255, 255, 255, 0.15), var(--shadow);
+}
+
+.panel {
+  display: grid;
+  gap: 10px;
+  place-items: center;
+}
+
+.status {
+  min-height: 28px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.controls {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-}
-.red {
-    background-color: red;
-}
-.blue {
-    background-color: blue;
-}
-.green {
-    background-color: green;
-}
-.yellow {
-    background-color: yellow;
+  gap: 10px;
 }
 
-.flash {
-    background-color: white;
+button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 80ms ease, background 120ms ease, opacity 120ms ease;
+}
+
+button:hover {
+  background: #2563eb;
+}
+button:active {
+  transform: translateY(1px);
+}
+button.secondary {
+  background: #6b7280;
+}
+button.secondary:hover {
+  background: #4b5563;
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --size: 130px;
+  }
 }
