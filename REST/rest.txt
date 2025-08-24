@@ -1,0 +1,8 @@
+//crud operations
+//get :- is used to retrieve resource
+//post :- submit new data to the server
+//put :- update existing data
+//patch :- update existing data partially
+//delete :- remove data
+
+
