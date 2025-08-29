@@ -4,6 +4,8 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path");
+const methodoveride = require("method-override");
+app.use(methodoveride("_method"));
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -13,7 +15,7 @@ let posts = [];
 
 app.get("/posts", (req, res) => {
   res.render("index.ejs", { posts });
-});git 
+});
 
 app.get("/posts/new", (req, res) => {
   res.render("new.ejs");
@@ -40,6 +42,19 @@ app.patch("/posts/:id", (req, res) => {
   post.content = newcontent;
   console.log(post);
   res.send("patch request is working");
+});
+
+app.get("/posts/:id/edit", (req, res) => {
+  let { id } = req.params;
+  let post = posts.find((p) => p.id == id);
+  res.render("edit.ejs", { post });
+  res.redirect("/posts");
+});
+
+app.delete("/posts/:id", (req, res) => {
+  let { id } = req.params;
+  posts = posts.filter((p) => p.id !== id);
+  res.redirect("/posts");
 });
 app.listen(port, () => {
   console.log(` app is listening on port ${port}`);
