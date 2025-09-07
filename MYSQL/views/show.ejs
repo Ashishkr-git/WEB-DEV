@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Now!</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">List of Users</h1>
+    <table
+      style="
+        width: auto;
+        margin: auto;
+        border: 1px solid black;
+        border-collapse: collapse;
+      "
+    >
+      <tr style="background-color: lightgray">
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+      <% users.forEach(user => { %>
+      <tr style="border: 1px solid black">
+        <td style="text-align: center"><%= user.id %></td>
+        <td style="text-align: center"><%= user.username %></td>
+        <td style="text-align: center"><%= user.email %></td>
+        <td style="text-align: center">
+          <button onclick="location.href='users/edit/<%= user.id %>'">
+            Edit
+          </button>
+          <form style="display: inline-block;" action="users/delete/<%= user.id %>?_method=delete" method="post">
+            <input type="password" name="password" placeholder="enter password" required />
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>

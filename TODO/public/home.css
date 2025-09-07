@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+}
+.todo-container {
+  position: static;
+  margin-left: 40vw;
+  border: 2px solid black;
+  height: 400px;
+  width: 300px;
+  display: flex;
+}
+.add-task {
+  margin-left: 48vw;
+  margin-top: 10px;
+}

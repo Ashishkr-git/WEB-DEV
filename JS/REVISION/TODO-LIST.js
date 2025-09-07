@@ -1,40 +1,22 @@
-let tasks = [];
+let button = document.querySelector(".add-task");
+let tasklist = document.querySelector(".task-list");
+let taskinput = document.querySelector(".task-input");
+let delbtn = document.querySelector(".delete");
 
-function tasklist() {
-  console.log(tasks);
-}
-function addtask() {
-  task = prompt("ENTER THE TASK YOU WANT TO ADD");
-  console.log(tasks.push(task));
-}
-function removetask() {
-  task = prompt("ENTER THE TASK YOU WANT TO REMOVE");
-  console.log(task.pop(task));
-}
-function updatetask() {
-  task = prompt("ENTER THE TASK YOU WANT TO REPLACE");
-  updatedtask = prompt("ENTER THE TASK YOU WANT TO REPLACE WITH");
-  console.log(tasks.replace(task, updatedtask[i]));
-}
-function closelist() {
-  alert("THANKYOU FOR USING TODOLIST");
-}
+button.addEventListener("click", function () {
+  let input = taskinput.value;
+  let task = document.createElement("li");
+  task.innerHTML = `${input} `;
+  tasklist.appendChild(task);
+  let btn = document.createElement("button");
+  btn.classList.add("delete");
+  btn.innerHTML = "Delete";
+  task.appendChild(btn);
+  taskinput.value = "";
+});
 
-while (true) {
-  let ask = prompt("WHAT OPERATION DO YOU WANT TO PERFORM");
-
-  if (ask == "addtask") {
-    addtask();
-  } else if (ask == "tasklist") {
-    tasklist();
-  } else if (ask == "updatetask") {
-    updatetask();
-  } else if (ask == "removetask") {
-    removetask;
-  } else if (ask == "closetask") {
-    closelist();
-    break;
-  } else {
-    prompt("ENTER THE VALID REQUEST");
+tasklist.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
   }
-}
+});
