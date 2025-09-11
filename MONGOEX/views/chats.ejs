@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>messenger</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Chats</h1>
+
+    <% chats.forEach(chat => { %>
+    <div class="chat">
+      <div class="sender box"><%= chat.sender %></div>
+      <div class="to box"><%= chat.To %></div>
+      <div class="message box"><%= chat.message %></div>
+      <div class="timestamp box"><%= chat.timestamp.toLocaleString() %></div>
+      <button onclick="location.href='/chats/<%= chat._id %>/edit';">
+        edit
+      </button>
+      <form action="/chats/<%= chat._id %>/delete?_method=DELETE" method="post">
+        <button type="submit">delete</button>
+      </form>
+    </div>
+    <% }) %>
+    <button class="add-chat-btn" onclick="location.href='/chats/newchat';">
+      <strong>New Chat</strong>
+    </button>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.chat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+  background-color: aliceblue;
+  list-style-type: none;
+  border: 2px solid black;
+}
+.box {
+  text-align: center;
+  padding: 5px;
+}
+.add-chat-btn {
+  margin-top: 5px;
+  margin-left: 95%;
+  border-radius: 5px;
+}

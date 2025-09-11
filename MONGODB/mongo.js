@@ -64,5 +64,17 @@ const User = mongoose.model("User", users);
 //   });
 
 User.find({ age: { $lt: 25 } }).then((response) => {
-  console.log(response);
+  console.log(response[0].name);
 });
+
+User.findOneAndUpdate(
+  { name: "Sumit Baniya" },
+  { name: "Reshit Mishra" },
+  { new: true }
+)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
