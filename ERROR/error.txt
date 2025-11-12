@@ -1,0 +1,4 @@
+error handler are the type of middlewares
+by default express has it own error handler and it status is set to 500 by deafult 
+
+when we call next() in error handling middlewares then it will search for non error handling middlewares

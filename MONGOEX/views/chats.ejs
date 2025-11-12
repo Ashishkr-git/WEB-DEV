@@ -18,6 +18,7 @@
       <button onclick="location.href='/chats/<%= chat._id %>/edit';">
         edit
       </button>
+      <button onclick="location.href='/chats/<%= chat._id %>';">show</button>
       <form action="/chats/<%= chat._id %>/delete?_method=DELETE" method="post">
         <button type="submit">delete</button>
       </form>
