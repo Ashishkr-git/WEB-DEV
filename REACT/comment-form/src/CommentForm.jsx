@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Formik, Form, Field, useFormik } from "formik";
-
+    import { useFormik } from "formik";
+ 
 const validate = (values) => {
   const errors = {};
   if (!values.username) {
@@ -17,7 +17,8 @@ export default function CommentForm({ addComment }) {
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      addComment(values);
+      formik.resetForm();
     },
   });
 

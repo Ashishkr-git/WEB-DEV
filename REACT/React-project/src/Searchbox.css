@@ -1,0 +1,11 @@
+.searchBox {
+  text-align: center;
+}
+
+#inputField {
+    border-radius: 30px;
+}
+
+#submitButton {
+  margin: 10px;
+}
